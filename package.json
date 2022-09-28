@@ -12,6 +12,8 @@
     "lambda:update": "./scripts/lambda_update.py $npm_package_name-lambda",
     "lambda:test": "./scripts/lambda_test.py $npm_package_name-lambda",
 
+    "dynamodb:create": "./scripts/dynamodb_create.py",
+
     "apigateway:create": ""
   }
 }
