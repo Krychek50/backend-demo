@@ -1,0 +1,17 @@
+{
+  "name": "backend-demo",
+  "version": "1.0.0",
+  "repository": "git@github.com:Krychek50/backend-demo.git",
+  "author": "Tom Nuttall <tsnuttall@gmail.com>",
+  "license": "MIT",
+
+  "scripts": {
+    "iam:create": "./scripts/role_create.sh $npm_package_name-lambda-role",
+
+    "lambda:create": "./scripts/lambda_create.py $npm_package_name-lambda",
+    "lambda:update": "./scripts/lambda_update.py $npm_package_name-lambda",
+    "lambda:test": "./scripts/lambda_test.py $npm_package_name-lambda",
+
+    "apigateway:create": ""
+  }
+}
