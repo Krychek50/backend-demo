@@ -14,6 +14,6 @@
 
     "dynamodb:create": "./scripts/dynamodb_create.py",
 
-    "apigateway:create": ""
+    "apigateway:create": "./scripts/apigatewat_create.py $npm_package_name-lambda $npm_package_name-api"
   }
 }

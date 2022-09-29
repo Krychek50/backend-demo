@@ -14,7 +14,6 @@ if __name__ == '__main__':
 
   # aws update-function-code
   cmd = shlex.split(f'aws lambda update-function-code --function-name {sys.argv[1]} --zip-file fileb://function.zip')
-
   ret = subprocess.run(cmd, capture_output=True)
 
   # remove zip

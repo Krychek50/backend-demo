@@ -7,9 +7,9 @@ from zipfile import ZipFile
 
 if __name__ == '__main__':
   # arn for role
-  cmd = shlex.split(f'aws iam get-role --role-name {sys.argv[1]} --query Role.[Arn] --output text')
-
+  cmd = shlex.split(f'aws iam get-role --role-name {sys.argv[1]}')
   ret = subprocess.run(cmd, capture_output=True)
+  
   arn = ret.stdout.decode('utf-8').strip('\n')
 
   # function zip
@@ -22,7 +22,6 @@ if __name__ == '__main__':
   cmd = shlex.split(f'aws lambda create-function --function-name {sys.argv[2]} \
                       --role {arn} --zip-file fileb://function.zip \
                       --runtime nodejs16.x --handler index.handler')
-
   ret = subprocess.run(cmd, capture_output=True)
 
   # remove zip
