@@ -10,12 +10,13 @@ exports.handler = async (event, context, callback) => {
   const response = {
     statusCode: 200,
     headers: {
-        "Access-Control-Allow-Headers": "Content-Type",
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "OPTIONS,POST,GET,PUT,DELETE"
+      "content-type": "json",
+      "access-control-allow-origin": "*",
+      "access-control-allow-headers": "*",
+      "access-control-allow-methods": "OPTIONS, GET, POST, PUT, DELETE",
     },
     body: JSON.stringify(result)
   };
 
-  return result;
+  return response;
 };

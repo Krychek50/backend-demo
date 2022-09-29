@@ -45,7 +45,7 @@ if __name__ == '__main__':
 
   # aws lambda add-permission
   source_arn = f"arn:aws:execute-api:eu-west-2:{account_id}:{api_id}/*/*/"
-  cmd = shlex.split(f'aws lambda add-permission --function-name {lambda_arn} --action lambda:InvokeFunction --statement-id api-invoke-lambda --principal apigateway.amazonaws.com --source-arn {source_arn}')
+  cmd = shlex.split(f'aws lambda add-permission --function-name {lambda_arn} --action lambda:InvokeFunction --statement-id {api_name} --principal apigateway.amazonaws.com --source-arn {source_arn}')
   ret = subprocess.run(cmd, capture_output=True)
 
   # aws apigatewayv2 create-route
