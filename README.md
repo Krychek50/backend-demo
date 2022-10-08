@@ -12,7 +12,7 @@ Database schema
 * *scripts* \
 Python setup scripts for AWS CLI
 * *src* 
-  - lambda \
+  - *lambda* \
 Lambda sourcecode
 * *tests* 
 Postman collection for testing API routes
