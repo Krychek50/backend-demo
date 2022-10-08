@@ -55,9 +55,9 @@ if __name__ == '__main__':
     print(ret.stderr.decode('utf-8'))
   else:
     print('Added lambda permission')
-
+  
   # aws apigatewayv2 create-route
-  routes = ['OPTIONS /', 'GET /', 'POST /', 'GET /{id}', 'PUT /{id}', 'DELETE /{id}']
+  routes = ['OPTIONS /{proxy+}', 'GET /', 'POST /', 'GET /{id}', 'PUT /{id}', 'DELETE /{id}']
   for route in routes:
     cmd = shlex.split(f'aws apigatewayv2 create-route --api-id {api_id} --route-key route --target integrations/{integration_id}')
     cmd[6] = route

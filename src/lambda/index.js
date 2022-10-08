@@ -35,11 +35,13 @@ exports.handler = async (event, context, callback) => {
       }
       break;
 
-    case "OPTIONS /": {
-      }
+    case "OPTIONS /":
+    case "OPTIONS /{id}":
+    case "OPTIONS /{proxy+}":
       break;
 
     default:
+
       statusCode = 400;
       break;
   }
