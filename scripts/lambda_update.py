@@ -3,6 +3,7 @@ import subprocess
 import shlex
 import sys
 import os
+import json
 from zipfile import ZipFile
 
 if __name__ == '__main__':
@@ -15,6 +16,10 @@ if __name__ == '__main__':
   # aws update-function-code
   cmd = shlex.split(f'aws lambda update-function-code --function-name {sys.argv[1]} --zip-file fileb://function.zip')
   ret = subprocess.run(cmd, capture_output=True)
+  if ret.returncode != 0:
+    print(ret.stderr.decode('utf-8'))
+  else:
+    print('Updated lambda function')
 
   # remove zip
   os.remove('function.zip')

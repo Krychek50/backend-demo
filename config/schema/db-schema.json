@@ -1,0 +1,19 @@
+{
+  "AttributeDefinitions": [
+    {
+        "AttributeName": "Id", 
+        "AttributeType": "S"
+    }
+  ], 
+  "ProvisionedThroughput": {
+    "WriteCapacityUnits": 5, 
+    "ReadCapacityUnits": 5
+  }, 
+  "TableName": "backend-demo-db", 
+  "KeySchema": [
+    {
+        "KeyType": "HASH", 
+        "AttributeName": "Id"
+    }
+  ]
+}

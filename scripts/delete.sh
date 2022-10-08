@@ -1,0 +1,1 @@
+aws dynamodb delete-table --table-name backend-demo-db

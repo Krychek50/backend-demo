@@ -6,14 +6,16 @@
   "license": "MIT",
 
   "scripts": {
-    "iam:create": "./scripts/role_create.sh $npm_package_name-lambda-role",
+    "iam:create": "./scripts/role_create.py $npm_package_name-lambda-role",
 
     "lambda:create": "./scripts/lambda_create.py $npm_package_name-lambda",
     "lambda:update": "./scripts/lambda_update.py $npm_package_name-lambda",
-    "lambda:test": "./scripts/lambda_test.py $npm_package_name-lambda",
 
     "dynamodb:create": "./scripts/dynamodb_create.py",
+    "dynamodb:populate": "./scripts/dynamodb_populate.py",
 
-    "apigateway:create": "./scripts/apigatewat_create.py $npm_package_name-lambda $npm_package_name-api"
+    "apigateway:create": "./scripts/apigateway_create.py $npm_package_name-lambda $npm_package_name-api",
+
+    "postman:test": "postman collection run ./tests/test_backend-demo-api.json"
   }
 }

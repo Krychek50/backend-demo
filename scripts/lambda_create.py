@@ -23,6 +23,10 @@ if __name__ == '__main__':
                       --role {arn} --zip-file fileb://function.zip \
                       --runtime nodejs16.x --handler index.handler')
   ret = subprocess.run(cmd, capture_output=True)
+  if ret.returncode != 0:
+    print(ret.stderr.decode('utf-8'))
+  else:
+    print('Created lambda function')
 
   # remove zip
   os.remove('function.zip')
