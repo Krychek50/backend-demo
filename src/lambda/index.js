@@ -40,7 +40,7 @@ exports.handler = async (event, context, callback) => {
       break;
   }
 
-	// JSON body response
+  // JSON body response
   const response = {
     statusCode,
     headers: {
