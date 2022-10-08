@@ -7,6 +7,41 @@
 	},
 	"item": [
 		{
+			"name": "OPTIONS /",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () => {",
+							"  pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "OPTIONS",
+				"header": [],
+				"url": {
+					"raw": "https://gpclnin8ok.execute-api.eu-west-2.amazonaws.com",
+					"protocol": "https",
+					"host": [
+						"gpclnin8ok",
+						"execute-api",
+						"eu-west-2",
+						"amazonaws",
+						"com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "POST /",
 			"event": [
 				{
@@ -37,10 +72,10 @@
 					}
 				},
 				"url": {
-					"raw": "https://4vocl6dgn0.execute-api.eu-west-2.amazonaws.com",
+					"raw": "https://gpclnin8ok.execute-api.eu-west-2.amazonaws.com",
 					"protocol": "https",
 					"host": [
-						"4vocl6dgn0",
+						"gpclnin8ok",
 						"execute-api",
 						"eu-west-2",
 						"amazonaws",
@@ -72,10 +107,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://4vocl6dgn0.execute-api.eu-west-2.amazonaws.com",
+					"raw": "https://gpclnin8ok.execute-api.eu-west-2.amazonaws.com",
 					"protocol": "https",
 					"host": [
-						"4vocl6dgn0",
+						"gpclnin8ok",
 						"execute-api",
 						"eu-west-2",
 						"amazonaws",
@@ -107,10 +142,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://4vocl6dgn0.execute-api.eu-west-2.amazonaws.com/test",
+					"raw": "https://gpclnin8ok.execute-api.eu-west-2.amazonaws.com/test",
 					"protocol": "https",
 					"host": [
-						"4vocl6dgn0",
+						"gpclnin8ok",
 						"execute-api",
 						"eu-west-2",
 						"amazonaws",
@@ -154,10 +189,10 @@
 					}
 				},
 				"url": {
-					"raw": "https://4vocl6dgn0.execute-api.eu-west-2.amazonaws.com/test",
+					"raw": "https://gpclnin8ok.execute-api.eu-west-2.amazonaws.com/test",
 					"protocol": "https",
 					"host": [
-						"4vocl6dgn0",
+						"gpclnin8ok",
 						"execute-api",
 						"eu-west-2",
 						"amazonaws",
@@ -199,10 +234,10 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "https://4vocl6dgn0.execute-api.eu-west-2.amazonaws.com/test",
+					"raw": "https://gpclnin8ok.execute-api.eu-west-2.amazonaws.com/test",
 					"protocol": "https",
 					"host": [
-						"4vocl6dgn0",
+						"gpclnin8ok",
 						"execute-api",
 						"eu-west-2",
 						"amazonaws",
