@@ -5,7 +5,7 @@ import sys
 
 if __name__ == '__main__':
   # Create role
-  cmd = shlex.split(f'aws iam create-role --role-name {sys.argv[1]} --assume-role-policy-document file://roles/trust-policy.json')
+  cmd = shlex.split(f'aws iam create-role --role-name {sys.argv[1]} --assume-role-policy-document file://config/roles/trust-policy.json')
   ret = subprocess.run(cmd, capture_output=True)
   if ret.returncode != 0:
     print(ret.stderr.decode('utf-8'))
