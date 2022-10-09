@@ -28,7 +28,7 @@
 				"method": "OPTIONS",
 				"header": [],
 				"url": {
-					"raw": "https://gpclnin8ok.execute-api.eu-west-2.amazonaws.com",
+					"raw": "https://gpclnin8ok.execute-api.eu-west-2.amazonaws.com/",
 					"protocol": "https",
 					"host": [
 						"gpclnin8ok",
@@ -36,6 +36,9 @@
 						"eu-west-2",
 						"amazonaws",
 						"com"
+					],
+					"path": [
+						""
 					]
 				}
 			},
@@ -200,13 +203,6 @@
 					],
 					"path": [
 						"test"
-					],
-					"query": [
-						{
-							"key": "name",
-							"value": "test",
-							"disabled": true
-						}
 					]
 				}
 			},
