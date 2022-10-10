@@ -1,7 +1,7 @@
 [
-  { "Id": { "S": "Item1" }, "Value": { "S": "0" } },
-  { "Id": { "S": "Item2" }, "Value": { "S": "1" } },
-  { "Id": { "S": "Item3" }, "Value": { "S": "2" } },
-  { "Id": { "S": "Item4" }, "Value": { "S": "3" } },
-  { "Id": { "S": "Item5" }, "Value": { "S": "4" } }
+  { "Id": { "S": "Item 1" }, "Value": { "S": "0" } },
+  { "Id": { "S": "Item 2" }, "Value": { "S": "1" } },
+  { "Id": { "S": "Item 3" }, "Value": { "S": "2" } },
+  { "Id": { "S": "Item 4" }, "Value": { "S": "3" } },
+  { "Id": { "S": "Item 5" }, "Value": { "S": "4" } }
 ]
