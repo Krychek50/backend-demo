@@ -8,7 +8,7 @@
   "scripts": {
     "iam:create": "./scripts/role_create.py $npm_package_name-lambda-role",
     "dynamodb:create": "./scripts/dynamodb_create.py",
-    "lambda:create": "./scripts/lambda_create.py $npm_package_name-lambda",
+    "lambda:create": "./scripts/lambda_create.py $npm_package_name-lambda-role $npm_package_name-lambda",
     "apigateway:create": "./scripts/apigateway_create.py $npm_package_name-lambda $npm_package_name-api",
 
     "lambda:update": "./scripts/lambda_update.py $npm_package_name-lambda",

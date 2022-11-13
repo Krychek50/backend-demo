@@ -3,6 +3,7 @@ import subprocess
 import shlex
 import sys
 import os
+import json
 from zipfile import ZipFile
 
 if __name__ == '__main__':
@@ -10,7 +11,8 @@ if __name__ == '__main__':
   cmd = shlex.split(f'aws iam get-role --role-name {sys.argv[1]}')
   ret = subprocess.run(cmd, capture_output=True)
   
-  arn = ret.stdout.decode('utf-8').strip('\n')
+  data = json.loads(ret.stdout)
+  arn = data["Role"]["Arn"]
 
   # function zip
   folder_path = os.path.join('src', 'lambda')
